@@ -8,83 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sassy+Frass&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="Style.css">
     
     <title>Fortune Cookie Simulator</title>
     <style>
-        body {
-            box-sizing: border-box;
-            margin: 0px;
-            background-image: url("judy's_living_room.png");
-            background-size: cover
-        }
-
-        h1 {
-            margin-top: 0.2em;
-            margin-bottom: 0em;
-            display: flex;
-            justify-content: center;
-            font-family: 'Sassy Frass', cursive;
-            font-size: 6rem;
-            color: white;
-            text-shadow: 2px 2px #ff0099;
-            text-align: center;
         
-        }
-        
-
-        img {
-            width: 20rem;
-        }
-
-        .vertical {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .cookie {
-            background-color: #ff62c0;
-            border: white 1px solid;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 30em;
-            padding: 2em;
-            color: white;
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        #display {
-            background-color: white;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            padding: 1em;
-            width: 20em;
-            height: 3em;
-            color: black;
-            border: black 1px solid;
-            border-radius: 10px;
-            margin-bottom: 2em;
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        input[type=button] {
-            background-color: #ffffff;
-            border: none;
-            color: rgb(0, 0, 0);
-            padding: 16px 32px;
-            text-decoration: none;
-            margin-top: 1em;
-            cursor: pointer;
-            border-radius: 25px;
-        }
-
-        input[type=button]:hover {
-            color: #ff62c0;
-        }
     </style>
 </head>
 <body>
@@ -102,29 +30,6 @@
     </div>
     </section>
 
-    <script>
-        function fortune() {
-            const judy = document.getElementById('judy');
-            const display = document.getElementById('display');
-
-            const fortunes = ["Don't hold onto things that require a tight grip.", 
-            "Every good and perfect gift is from above.", 
-            "Be careful who you trust. Salt and sugar look the same.",
-            "Tough love only works when there's as much love as there is tough.", 
-            "I am inside your walls", 
-            "Every new beginning comes from some other beginning's end.", 
-            "She lives the poetry she cannot write.",
-            "Little by little, one travels far."];
-            const random = Math.floor(Math.random() * fortunes.length);
-            document.getElementById('judy').src="3-depressed.png"
-            display.innerHTML = fortunes[random];
-
-            if(fortunes[random] != "I am inside your walls") {
-                judy.src="3-smile.png"
-            } else {
-                judy.src="3-depressed.png"
-            }
-        }
-    </script>
+    <script src="FortuneTelling.js"></script>
 </body>
 </html>
