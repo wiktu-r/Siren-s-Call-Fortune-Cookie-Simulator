@@ -36,7 +36,7 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 30em;
+            max-width: 30em;
             padding: 2em;
             color: white;
             font-family: 'Courier New', Courier, monospace;
@@ -70,4 +70,41 @@ body {
 
         input[type=button]:hover {
             color: #ff62c0;
+        }
+
+        #promo {
+            position: fixed;
+            width: 100%;
+            background-color: #ff62c0;
+            color: white;
+            bottom: 0px;
+            padding: 2em 0em;
+            text-align: center;
+        }
+
+        #promo > * {
+            color: white;
+            text-decoration: none;
+        }
+
+        #click {
+            text-decoration: underline;
+        }
+
+        #close {
+            padding: 0.5em 0.75em; 
+            position: absolute;
+            top: 0em;
+            right: 0em;
+        }
+
+        #close:hover {
+            background-color: #ff0099;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #display {
+                width: 15em;
+            }
         }
